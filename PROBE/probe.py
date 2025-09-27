@@ -30,7 +30,6 @@ class PROBE():
             A = 1 / (1 - (1 / self.nentity) ** self.alpha)
             self.transformed_ranks = [[A * ((1 / x) ** self.alpha - 1) + 1 for x in v] for k, v in
                                       self.raw_ranks.items()]
-            # just change it to numpy(without hindering position informations)?
         else:
             raise Exception(f'No mode supports \'{mode}\'')
 
